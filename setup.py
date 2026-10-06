@@ -25,13 +25,7 @@ setup(
     packages=find_packages('.'),
     install_requires=install_requires,
     extras_require = {
-        # TODO: Replace this development branch by the first `picmistandard`
-        # release that contains the pydantic refactoring of PICMI
-        # (picmi-standard/picmi#133), i.e. `picmistandard>=0.35.0`, before
-        # merging. Note that a direct URL requirement cannot be uploaded
-        # to PyPI, i.e. FBPIC cannot be released with this requirement.
-        'picmi':  ["picmistandard @ git+https://github.com/chillenzer/picmi.git@pydantic-refactoring",
-                   "numexpr", "periodictable"],
+        'picmi':  ["picmistandard>=0.35.0", "numexpr", "periodictable"],
     },
     include_package_data=True,
     platforms='any',
